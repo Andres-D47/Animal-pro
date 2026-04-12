@@ -2,25 +2,74 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Servicios</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Pro Animal</title>
+    <link rel="stylesheet" href="css/servicios.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Servicios</h1>
-        </nav>
+     <header class="header-principal">
+        <div class="contenedor-header">
+            <div class="logo">
+                <img src="assets/img/Animal-pro.jpeg" alt="Logo Animal Pro">
+            </div>
+
+            <nav class="navegacion">
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html" class="activo">Servicios</a>
+                <a href="tienda.html">Tienda</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <div class="utilidades">
+                <button class="btn-icono">🔍</button>
+                <button class="btn-icono">👤</button>
+                <button class="btn-icono">🛒</button>
+            </div>
+        </div>
     </header>
 
-    <main>
-        <section>
-            <h2>Lista de Servicios</h2>
-            <div class="card">
-                <h3>Servicio 1</h3>
-                <p>Descripción corta</p>
-                <a href="detalle-servicio.html">Ver más</a>
+    <main class="services-container">
+        <section class="services-list-section">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="input-busqueda" placeholder="Buscar servicio...">
+            </div>
+
+            <div class="filter-chips">
+                <button class="chip">Tipo</button>
+                <button class="chip">Precio</button>
+                <button class="chip">Popular</button>
+            </div>
+
+            <div class="services-list" id="lista-servicios">
             </div>
         </section>
+
+        <aside class="favorites-sidebar">
+            <h2 class="sidebar-title"><i class="far fa-heart" style="color: #e57373;"></i> Página de Servicios</h2>
+            
+            <div id="favorites-container" class="favorites-list">
+                </div>
+
+            <button class="btn-outline-contact" onclick="window.location.href='contacto.html'">
+                <i class="fas fa-phone-alt" style="color: #e57373;"></i> Contacto
+            </button>
+        </aside>
     </main>
+
+    <footer class="footer-principal">
+        <div class="contenedor-footer">
+        <nav class="footer-nav">
+            <a href="#">Contáctanos</a>
+            <span class="divisor">|</span>
+            <a href="#">Redes</a>
+            <span class="divisor">|</span>
+            <a href="#">Información</a>
+        </nav>
+    </div>
+    </footer>
+
+    <script src="js/servicios.js"></script>
 </body>
 </html>
