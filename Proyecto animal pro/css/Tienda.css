@@ -1,31 +1,76 @@
-    /* ── Navbar ── */
-    .barra {
-      background: #fff;
-      border-bottom: 1px solid #e5e5e5;
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    }
-    .barra-logo { font-size: 20px; font-weight: 700; color: #3B4FBB; letter-spacing: 1px; }
-    .barra-logo span { color: #F5A623; }
-    .barra-links { display: flex; gap: 2rem; }
-    .barra-links a {
-      font-size: 14px;
-      color: #666;
-      text-decoration: none;
-      cursor: pointer;
-      transition: color 0.15s;
-    }
-    .barra-links a:hover { color: #3B4FBB; }
-    .barra-links a.active { color: #3B4FBB; font-weight: 600; }
-    .barra-icons { display: flex; gap: 1.2rem; font-size: 20px; color: #555; cursor: pointer; }
-    .barra-icons span:hover { color: #3B4FBB; }
+/* Reset Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* ── Navbar ── */
+.header-principal {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0; /* Línea sutil de separación */
+    padding: 15px 0;
+    width: 100%;
+}
+
+.contenedor-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* El secreto: Logo | Nav | Iconos */
+    align-items: center;
+    padding: 0 2%;
+}
+
+.logo img {
+    height: 60px;
+}
+
+/* Navegación */
+.navegacion {
+    display: flex;
+    gap: 30px; /* Espacio entre los links */
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #475569; /* Gris suave para links inactivos */
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navegacion a.activo {
+    color: #1e40af; /* El azul de Figma para el link activo */
+    font-weight: 700;
+}
+
+.navegacion a:hover {
+    color: #1e40af;
+}
+
+/* Iconos del lado derecho */ 
+.utilidades {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-icono {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #475569;
+    transition: transform 0.2s;
+}
+
+.btn-icono:hover {
+    transform: scale(1.1);
+}
 
     /* ── Layout ── */
     .main {
