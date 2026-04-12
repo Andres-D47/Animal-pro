@@ -1,24 +1,160 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset Global */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    background: #333;
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Hero - El bloque azul de arriba */
+.hero-figma {
+    background-color: #f0f7ff; /* Azul pálido exacto */
+    padding: 80px 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-figma h1 {
+    font-size: 3.5rem;
+    color: #0f172a;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.boton-primario {
+    background-color: #3963b1;
     color: white;
-    padding: 10px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
-nav a {
-    color: white;
+    padding: 20px 35px;
+    border-radius: 10px;
     text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+}
+
+/* Sección Buscados - El bloque crema de abajo */
+.seccion-buscados {
+    background-color: #fff9f0; /* Color crema de Figma */
+    padding: 60px 0;
+    width: 100%;
+}
+
+.grid-buscados {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.caja-blanca {
+    background-color: #ffffff;
+    width: 120px;
+    height: 120px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    margin: 0 auto 10px;
+}
+/* Estilos para el Footer */
+.footer-principal {
+    background-color: #1a3a8a; /* Azul oscuro que coincide con la imagen */
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 50px; /* Separa el footer del contenido anterior */
+}
+
+.contenedor-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 15px; /* Espacio entre palabras y barras */
+    align-items: center;
+}
+
+.footer-nav a {
+    color: #ffffff; /* Blanco para el texto */
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline; /* Efecto sutil al pasar el mouse */
+}
+
+.divisor {
+    color: #ffffff;
+    font-weight: 300;
+}
+/* Estilos del Header */
+.header-principal {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0; /* Línea sutil de separación */
+    padding: 15px 0;
+    width: 100%;
+}
+
+.contenedor-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* El secreto: Logo | Nav | Iconos */
+    align-items: center;
+    padding: 0 2%;
+}
+
+.logo img {
+    height: 60px; /* Ajusta según el tamaño de tu imagen */
+}
+
+/* Navegación */
+.navegacion {
+    display: flex;
+    gap: 30px; /* Espacio entre los links */
+}
+
+.navegacion a {
+    text-decoration: none;
+    color: #475569; /* Gris suave para links inactivos */
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.navegacion a.activo {
+    color: #1e40af; /* El azul de Figma para el link activo */
+    font-weight: 700;
+}
+
+.navegacion a:hover {
+    color: #1e40af;
+}
+
+/* Iconos del lado derecho */ 
+.utilidades {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-icono {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #475569;
+    transition: transform 0.2s;
+}
+
+.btn-icono:hover {
+    transform: scale(1.1);
 }
