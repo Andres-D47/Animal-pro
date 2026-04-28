@@ -1,0 +1,93 @@
+.contact-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* TARJETAS */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    width: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* TÍTULOS */
+.card h2 {
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+/* FORMULARIO */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5f5;
+    font-size: 14px;
+}
+
+form textarea {
+    resize: none;
+    height: 100px;
+}
+
+form button {
+    background-color: #3963b1;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+form button:hover {
+    background-color: #2d4ea2;
+}
+
+/* REDES */
+.social {
+    display: block;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #0f172a;
+}
+
+.facebook { background-color: #e7f0ff; }
+.instagram { background-color: #ffe7f0; }
+.twitter { background-color: #e7f7ff; }
+.youtube { background-color: #ffe7e7; }
+
+/* INFO CONTACTO ABAJO */
+.info-contacto {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+/* RESPONSIVE (MUY PRO 🔥) */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

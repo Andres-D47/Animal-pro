@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProAnimal – Tienda de Productos</title>
+  <link rel="stylesheet" href="css/Tienda.css"/>
+
+</head>
+
+<body> 
+<script src="js/Tienda.js"></script>
+<!-- Navbar -->
+<header class="header-principal">
+  <div class="contenedor-header">
+    <div class="logo">
+        <img src="assets/img/Animal-pro.jpeg" alt="Logo Animal Pro">
+    </div>
+
+    <nav class="navegacion">
+      <a href="index.html">Inicio</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="tienda.html" class="activo">Tienda</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <div class="utilidades">
+      <button class="btn-icono">🔍</button>
+      <button class="btn-icono">👤</button>
+      <button class="btn-icono">🛒</button>
+    </div>
+  </div>
+
+</header>
+
+<!-- Main content -->
+<div class="main">
+
+  <!-- Left: products -->
+  <div class="left">
+    <h1 class="titulo-pagina">Tienda de Productos</h1>
+    <p class="subtitulo-pagina">Encuentra todo lo que tu mascota necesita</p>
+
+    <div class="search-bar">
+      <span class="search-icon">🔍</span>
+      <input type="text" id="searchInput" placeholder="Buscar productos..." oninput="renderProducts()" />
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="setFilter('Todos', this)">Todos</button>
+      <button class="filter-btn" onclick="setFilter('Juguetes', this)">Juguetes</button>
+      <button class="filter-btn" onclick="setFilter('Comida', this)">Comida</button>
+      <button class="filter-btn" onclick="setFilter('Accesorios', this)">Accesorios</button>
+      <button class="filter-btn" onclick="setFilter('Higiene', this)">Higiene</button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <!-- Right: cart -->
+  <div>
+    <div class="cart-panel">
+      <div class="cart-header">
+        <span class="cart-icon">🛒</span>
+        Carrito de Compras
+      </div>
+      <div id="cartContent">
+        <p class="cart-empty">Tu carrito está vacío</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // ── Init ──
+  renderProducts();
+</script>
+
+</body>
+</html>
